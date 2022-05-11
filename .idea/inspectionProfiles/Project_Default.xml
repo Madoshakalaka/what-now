@@ -1,0 +1,136 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="AngularAmbiguousComponentTag" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="data_excluded" level="ERROR" enabled="true" />
+      <scope name="Open Files" level="ERROR" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="AngularCliAddDependency" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="data_excluded" level="WARNING" enabled="true" />
+      <scope name="Open Files" level="WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="AngularInaccessibleComponentMemberInAotMode" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="data_excluded" level="WARNING" enabled="true" />
+      <scope name="Open Files" level="WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="AngularIncorrectTemplateDefinition" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="data_excluded" level="ERROR" enabled="true" />
+      <scope name="Open Files" level="ERROR" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="AngularInsecureBindingToEvent" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="data_excluded" level="WARNING" enabled="true" />
+      <scope name="Open Files" level="WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="AngularInvalidAnimationTriggerAssignment" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="data_excluded" level="ERROR" enabled="true" />
+      <scope name="Open Files" level="ERROR" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="AngularInvalidEntryComponent" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="data_excluded" level="ERROR" enabled="true" />
+      <scope name="Open Files" level="ERROR" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="AngularInvalidExpressionResultType" enabled="true" level="WARNING" enabled_by_default="false">
+      <scope name="data_excluded" level="WARNING" enabled="true" />
+      <scope name="Open Files" level="WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="AngularInvalidImportedOrDeclaredSymbol" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="data_excluded" level="ERROR" enabled="true" />
+      <scope name="Open Files" level="ERROR" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="AngularInvalidSelector" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="data_excluded" level="ERROR" enabled="true" />
+      <scope name="Open Files" level="ERROR" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="AngularInvalidTemplateReferenceVariable" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="data_excluded" level="ERROR" enabled="true" />
+      <scope name="Open Files" level="ERROR" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="AngularMissingEventHandler" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="data_excluded" level="ERROR" enabled="true" />
+      <scope name="Open Files" level="ERROR" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="AngularMissingOrInvalidDeclarationInModule" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="data_excluded" level="ERROR" enabled="true" />
+      <scope name="Open Files" level="ERROR" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="AngularMultipleStructuralDirectives" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="data_excluded" level="ERROR" enabled="true" />
+      <scope name="Open Files" level="ERROR" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="AngularNonEmptyNgContent" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="data_excluded" level="ERROR" enabled="true" />
+      <scope name="Open Files" level="ERROR" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="AngularRecursiveModuleImportExport" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="data_excluded" level="ERROR" enabled="true" />
+      <scope name="Open Files" level="ERROR" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="AngularUndefinedBinding" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="data_excluded" level="ERROR" enabled="true" />
+      <scope name="Open Files" level="ERROR" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="AngularUndefinedModuleExport" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="data_excluded" level="ERROR" enabled="true" />
+      <scope name="Open Files" level="ERROR" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="AngularUndefinedTag" enabled="true" level="ERROR" enabled_by_default="false">
+      <scope name="data_excluded" level="ERROR" enabled="true" />
+      <scope name="Open Files" level="ERROR" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="DuplicatedCode" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="7">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="slot" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyCompatibilityInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <scope name="Project Files" level="WARNING" enabled="false">
+        <option name="ourVersions">
+          <value>
+            <list size="6">
+              <item index="0" class="java.lang.String" itemvalue="2.7" />
+              <item index="1" class="java.lang.String" itemvalue="3.4" />
+              <item index="2" class="java.lang.String" itemvalue="3.5" />
+              <item index="3" class="java.lang.String" itemvalue="3.6" />
+              <item index="4" class="java.lang.String" itemvalue="3.7" />
+              <item index="5" class="java.lang.String" itemvalue="3.8" />
+            </list>
+          </value>
+        </option>
+      </scope>
+      <option name="ourVersions">
+        <value>
+          <list size="5">
+            <item index="0" class="java.lang.String" itemvalue="2.7" />
+            <item index="1" class="java.lang.String" itemvalue="3.5" />
+            <item index="2" class="java.lang.String" itemvalue="3.6" />
+            <item index="3" class="java.lang.String" itemvalue="3.7" />
+            <item index="4" class="java.lang.String" itemvalue="3.8" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="wxpython" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="SyntaxError" enabled="false" level="ERROR" enabled_by_default="false" />
+  </profile>
+</component>

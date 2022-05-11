@@ -1,0 +1,3 @@
+[build]
+dist = "dist/release/uncompressed"
+public_url = "https://assets.siyuanyan.net/jiggle/"

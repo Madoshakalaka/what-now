@@ -1,0 +1,11 @@
+[workspace]
+members = ["backend", "frontend", "jiggle"]
+[profile.release.package.frontend]
+# optimization over all codebase ( better optimization, slower build )
+codegen-units = 1
+# link time optimization using using whole-program analysis
+opt-level = 'z'
+
+[profile.release.package.jiggle]
+codegen-units = 1
+opt-level = 'z'
