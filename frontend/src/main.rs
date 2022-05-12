@@ -457,14 +457,23 @@ impl Reducible for UpThereDates {
     fn reduce(self: Rc<Self>, action: Self::Action) -> Rc<Self> {
         match action {
             StickDateUpdate::AddDateUpThere(d) => {
-                let mut new_self = (*self).clone();
-                new_self.insert(d);
-                Rc::new(UpThereDates(new_self))
+                if ! self.contains(&d){
+                    let mut new_self = (*self).clone();
+                    new_self.insert(d);
+                    Rc::new(UpThereDates(new_self))
+                }else{
+                    self
+                }
             }
             StickDateUpdate::RemoveDateDownBelow(d) => {
-                let mut new_self = (*self).clone();
-                new_self.remove(&d);
-                Rc::new(UpThereDates(new_self))
+                if self.contains(&d){
+                    let mut new_self = (*self).clone();
+                    new_self.remove(&d);
+                    Rc::new(UpThereDates(new_self))
+
+                }else{
+                    self
+                }
             }
         }
     }
@@ -533,10 +542,10 @@ pub fn app() -> Html {
                 <Global css={global}/>
 
             if let Some(url) = *enlarged_url {
-    <div class={modal} onclick={dismiss_modal.clone()}>
-      <img src={url} onclick={dismiss_modal}/>
-    </div>
-                }
+                <div class={modal} onclick={dismiss_modal.clone()}>
+                  <img src={url} onclick={dismiss_modal}/>
+                </div>
+            }
 
                 <p>{"俺的手机上有个程序，以随机时间点提醒俺记录当下，诚实，不添油加醋，没有 context"}</p>
                 <p>{"希望这样做能给生活带来冷静、客观、理智、和觉察～"}</p>
@@ -900,8 +909,10 @@ pub fn use_debounced_window_scrolling() -> bool {
         });
     }
 
+
     *state
 }
+
 trait CssStyleDeclarationExt {
     fn margin_top(&self) -> String;
 }
@@ -915,10 +926,10 @@ impl CssStyleDeclarationExt for CssStyleDeclaration {
     }
 }
 
+
 #[function_component(DayHeading)]
 pub fn day_heading(props: &DayHeadingProps) -> Html {
-    // let _ = use_window_scroll();
-    let _ = use_window_scroll();
+    let scrolling = use_debounced_window_scrolling();
 
     let sticky_date = use_slice_dispatch::<UpThereDates>();
 
@@ -927,35 +938,38 @@ pub fn day_heading(props: &DayHeadingProps) -> Html {
 
 
     let h2 = use_node_ref();
-    let up_there = {
-        if let Some(h2) = h2.cast::<HtmlHeadingElement>() {
-            let rect = h2.get_bounding_client_rect();
 
-            let offset = 0f64;
+    if scrolling{
+        let up_there = {
+            if let Some(h2) = h2.cast::<HtmlHeadingElement>() {
+                let rect = h2.get_bounding_client_rect();
 
-
-
-            let document = gloo_utils::document_element();
-            let window = gloo_utils::window();
-
-            if let Ok(Some(style_dec)) = window.get_computed_style(&h2){
-                let margin_top_in_px = js_sys::parse_float(&style_dec.margin_top());
-                let inner_height: f64 = window.inner_height().unwrap().as_f64().unwrap();
-                let view_height = f64::max(document.client_height() as f64, inner_height);
-
-                !(rect.top() - margin_top_in_px).is_sign_positive()
-            }else{
-                false
-            }
+                let offset = 0f64;
 
 
-        } else { false }
-    };
-    if up_there {
-        sticky_date(StickDateUpdate::AddDateUpThere(props.date));
-    } else {
-        sticky_date(StickDateUpdate::RemoveDateDownBelow(props.date));
+                let document = gloo_utils::document_element();
+                let window = gloo_utils::window();
+
+                if let Ok(Some(style_dec)) = window.get_computed_style(&h2){
+                    let margin_top_in_px = js_sys::parse_float(&style_dec.margin_top());
+                    let inner_height: f64 = window.inner_height().unwrap().as_f64().unwrap();
+                    let view_height = f64::max(document.client_height() as f64, inner_height);
+
+                    !(rect.top() - margin_top_in_px).is_sign_positive()
+                }else{
+                    false
+                }
+
+
+            } else { false }
+        };
+        if up_there {
+            sticky_date(StickDateUpdate::AddDateUpThere(props.date));
+        } else {
+            sticky_date(StickDateUpdate::RemoveDateDownBelow(props.date));
+        }
     }
+
 
     html! {
         <h2 ref={h2}>{props.date.into_chinese_month_and_day()}</h2>
